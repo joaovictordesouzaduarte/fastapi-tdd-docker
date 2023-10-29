@@ -1,4 +1,3 @@
-
 import logging  # new
 import os
 
@@ -30,7 +29,6 @@ def init_db(app: FastAPI) -> None:
     )
 
 
-
 async def generate_schema() -> None:
     log.info("Initializing Tortoise...")
 
@@ -41,7 +39,6 @@ async def generate_schema() -> None:
     log.info("Generating database schema via Tortoise...")
     await Tortoise.generate_schemas()
     await Tortoise.close_connections()
-
 
 
 if __name__ == "__main__":
